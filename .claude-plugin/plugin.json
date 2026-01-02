@@ -1,0 +1,83 @@
+{
+  "name": "anki-claude-plugin",
+  "version": "1.0.0",
+  "description": "Create and manage Anki flashcards directly from Claude Code via AnkiConnect",
+  "author": "Joseph Muller",
+  "homepage": "https://github.com/jtmuller5/anki-claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "anki",
+    "flashcards",
+    "learning",
+    "spaced-repetition",
+    "memory",
+    "study"
+  ],
+  "requirements": {
+    "claude_version": ">=0.1.0"
+  },
+  "external_dependencies": [
+    {
+      "name": "Anki Desktop",
+      "url": "https://apps.ankiweb.net/",
+      "description": "Desktop application for managing flashcards"
+    },
+    {
+      "name": "AnkiConnect",
+      "url": "https://ankiweb.net/shared/info/2055492159",
+      "description": "Anki add-on that provides an API for external applications (code: 2055492159)"
+    }
+  ],
+  "commands": [
+    {
+      "name": "create-flashcard",
+      "file": "commands/create-flashcard.md",
+      "description": "Create a new Anki flashcard with custom content, deck, and tags"
+    },
+    {
+      "name": "find-cards",
+      "file": "commands/find-cards.md",
+      "description": "Search for Anki flashcards using keywords or advanced query syntax"
+    },
+    {
+      "name": "list-decks",
+      "file": "commands/list-decks.md",
+      "description": "List all existing Anki decks with statistics"
+    },
+    {
+      "name": "create-deck",
+      "file": "commands/create-deck.md",
+      "description": "Create a new Anki deck"
+    },
+    {
+      "name": "review-due",
+      "file": "commands/review-due.md",
+      "description": "Show count of Anki flashcards due for review by deck"
+    },
+    {
+      "name": "anki-review",
+      "file": "commands/anki-review.md",
+      "description": "Review Anki flashcards interactively with ease ratings"
+    }
+  ],
+  "agents": [
+    {
+      "name": "anki-flashcard-manager",
+      "file": "agents/anki-flashcard-manager.md",
+      "description": "Create Anki flashcards, add cards to decks, find cards due for review, or interact with AnkiConnect API"
+    },
+    {
+      "name": "anki-flashcard-reviewer",
+      "file": "agents/anki-flashcard-reviewer.md",
+      "description": "Review Anki flashcards interactively, one at a time, with ease ratings"
+    }
+  ],
+  "config": {
+    "ankiconnect_url": "http://localhost:8765"
+  },
+  "tags": [
+    "productivity",
+    "learning",
+    "education"
+  ]
+}
