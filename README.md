@@ -2,7 +2,14 @@
 
 A Claude Code plugin for creating and managing Anki flashcards directly from your terminal.
 
-## Run Locally
+## Installation
+
+```
+/plugin install jtmuller5/anki-claude-plugin
+```
+
+## Develop Locally
+Open the project directory and run:
 ```
 claude --plugin-dir .
 ```
